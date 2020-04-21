@@ -2,6 +2,7 @@ package com.sen.myapplication.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -15,12 +16,12 @@ import com.alibaba.android.vlayout.LayoutHelper;
  * 日期时间: 2020/4/20 13:55
  * 内容描述:
  */
-public class BaseDelegateAdapter extends DelegateAdapter.Adapter<RecyclerView.ViewHolder> {
+public class BaseDelegateAdapter extends DelegateAdapter.Adapter<BaseDelegateAdapter.BaseViewHolder> {
     private LayoutHelper mLayoutHelper;  //布局Helper
     private int mCount = -1;    //要显示的元素的个数
     private int mLayoutId = -1; //布局的id
     private Context mContext;
-    private int mViewTypeItem = -1;
+    private int mViewTypeItem = -1;  //ViewType的item
 
     /**
      *
@@ -30,7 +31,7 @@ public class BaseDelegateAdapter extends DelegateAdapter.Adapter<RecyclerView.Vi
      * @param count
      * @param viewTypeItem
      */
-    protected BaseDelegateAdapter(Context context, LayoutHelper layoutHelper, int layoutId, int count, int viewTypeItem) {
+    public BaseDelegateAdapter(Context context, LayoutHelper layoutHelper, int layoutId, int count, int viewTypeItem) {
         this.mContext = context;
         this.mCount = count;
         this.mLayoutHelper = layoutHelper;
@@ -46,16 +47,16 @@ public class BaseDelegateAdapter extends DelegateAdapter.Adapter<RecyclerView.Vi
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == mViewTypeItem) {
-            return new RecyclerView.ViewHolder(LayoutInflater.from(mContext).inflate(mLayoutId, parent, false)) {
+            return new BaseViewHolder(LayoutInflater.from(mContext).inflate(mLayoutId, parent, false)) {
             };
         }
         return null;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
 
     }
 
@@ -72,5 +73,12 @@ public class BaseDelegateAdapter extends DelegateAdapter.Adapter<RecyclerView.Vi
     @Override
     public int getItemCount() {
         return mCount;
+    }
+
+    class BaseViewHolder extends RecyclerView.ViewHolder{
+
+        public BaseViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
     }
 }

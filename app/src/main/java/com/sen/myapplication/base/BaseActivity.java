@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.ButterKnife;
+
 /**
  * author:sen
  * email:562605446@qq.com
@@ -25,10 +27,10 @@ public abstract class BaseActivity extends AppCompatActivity  {
     protected final String TAG = this.getClass().getSimpleName();
 
     //是否显示标题栏
-    protected boolean isShowTitle = true;
+    protected boolean isShowTitle = false;
 
     //是否显示状态栏
-    protected boolean isShowStatusBar = true;
+    protected boolean isShowStatusBar = false;
 
     //是否允许旋转屏幕
     protected boolean isAllowScreenRoate = false;
@@ -51,7 +53,7 @@ public abstract class BaseActivity extends AppCompatActivity  {
 
         //设置布局
         setContentView(getLayout());
-
+        ButterKnife.bind(this);
         //设置屏幕是否可旋转
         if (isAllowScreenRoate) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
