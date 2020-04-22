@@ -42,7 +42,8 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.btn_shopping_cart:
-
+                Intent intent1 = new Intent(this,ShoppingCartActivity.class);
+                startActivity(intent1);
                 break;
         }
     }

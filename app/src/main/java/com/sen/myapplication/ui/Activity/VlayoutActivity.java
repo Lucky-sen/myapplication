@@ -35,10 +35,10 @@ import butterknife.BindView;
 
 
 /**
- * 作者：admin016
- * 日期时间: 2020/4/20 11:06
- * 内容描述:
- */
+ * 作者：sen
+ * 日期时间:
+ * 内容描述: 商品详情
+ * */
 public class VlayoutActivity extends BaseActivity {
 
     @BindView(R.id.refreshLayout)

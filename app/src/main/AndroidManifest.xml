@@ -59,6 +59,8 @@
         <activity android:name=".ui.Activity.VlayoutActivity"/>
         <!--购物车 -->
         <activity android:name=".ui.Activity.ShoppingCartActivity"/>
+        <!--全部分类-->
+        <activity android:name=".ui.Activity.CategoryActivity"/>
     </application>
 
 </manifest>
