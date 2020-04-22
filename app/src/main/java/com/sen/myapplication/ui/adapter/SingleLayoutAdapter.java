@@ -71,7 +71,7 @@ public class SingleLayoutAdapter extends DelegateAdapter.Adapter<SingleLayoutAda
         .setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(Object data, int position) {
-                Toast.makeText(context, "点击了"+position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "点击了Banner"+position, Toast.LENGTH_SHORT).show();
             }
         })
         .addOnPageChangeListener(new OnPageChangeListener() {

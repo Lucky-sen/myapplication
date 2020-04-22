@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_recommed"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@mipmap/icon_kobe"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/iv_recommed"
+        android:layout_alignTop="@+id/iv_recommed"
+        android:layout_alignBottom="@+id/iv_recommed"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="推荐标题"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="推荐内容"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="推荐时间"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

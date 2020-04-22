@@ -3,7 +3,6 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
     >
 
     <ImageView
@@ -11,13 +10,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/icon_banner_five"
+        android:scaleType="fitXY"
         />
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="图片内容描述"
+        android:textColor="@color/gold"
+        android:text="瀑布流"
+        android:gravity="center"
         />
 
 </LinearLayout>

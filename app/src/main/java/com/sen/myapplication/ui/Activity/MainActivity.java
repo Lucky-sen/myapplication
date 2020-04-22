@@ -7,9 +7,13 @@ import android.widget.Button;
 import com.sen.myapplication.R;
 import com.sen.myapplication.base.BaseActivity;
 
+import butterknife.BindView;
+
 public class MainActivity extends BaseActivity  implements View.OnClickListener{
 
     private Button btnVlayout;
+    @BindView(R.id.btn_shopping_cart)
+    Button btnCatr;
 
     @Override
     protected int getLayout() {
@@ -20,6 +24,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
     protected void initView() {
         btnVlayout = findViewById(R.id.btn_vlayout);
         btnVlayout.setOnClickListener(this);
+        btnCatr.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +40,9 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
                 Intent intent = new Intent();
                 intent.setClass(this, VlayoutActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_shopping_cart:
+
                 break;
         }
     }

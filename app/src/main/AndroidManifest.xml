@@ -57,6 +57,8 @@
         </activity>
         <!--vlayout测试Activity-->
         <activity android:name=".ui.Activity.VlayoutActivity"/>
+        <!--购物车 -->
+        <activity android:name=".ui.Activity.ShoppingCartActivity"/>
     </application>
 
 </manifest>

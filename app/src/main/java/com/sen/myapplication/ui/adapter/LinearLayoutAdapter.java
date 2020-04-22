@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,11 +27,13 @@ public class LinearLayoutAdapter extends DelegateAdapter.Adapter<LinearLayoutAda
     private Context context;
     private LayoutHelper layoutHelper;
     private List<String> titles;
+    private int itemViewType = -1;
 
-    public LinearLayoutAdapter(Context context, LayoutHelper layoutHelper, List<String> titles) {
+    public LinearLayoutAdapter(Context context, LayoutHelper layoutHelper, List<String> titles,int itemViewType) {
         this.context = context;
         this.layoutHelper = layoutHelper;
         this.titles = titles;
+        this.itemViewType = itemViewType;
     }
 
     @Override
@@ -40,13 +44,21 @@ public class LinearLayoutAdapter extends DelegateAdapter.Adapter<LinearLayoutAda
     @NonNull
     @Override
     public TitleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new TitleViewHolder(LayoutInflater.from(context).inflate(R.layout.item_title, parent, false));
+        return new TitleViewHolder(LayoutInflater.from(context).inflate(R.layout.item_linearlayout, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull TitleViewHolder holder, int position) {
         if(holder!=null){
-            holder.tvTitle.setText("线型布局"+titles.get(position));
+           holder.tvOne.setText("标题"+position);
+           holder.tvTwo.setText("内容"+position);
+           holder.tvThree.setText("日期"+position);
+           holder.imageView.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Toast.makeText(context, "商品推荐"+position, Toast.LENGTH_SHORT).show();
+               }
+           });
         }
     }
 
@@ -55,11 +67,22 @@ public class LinearLayoutAdapter extends DelegateAdapter.Adapter<LinearLayoutAda
         return titles.size();
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return itemViewType;
+    }
+
     class TitleViewHolder extends RecyclerView.ViewHolder{
-        TextView tvTitle;
+        ImageView imageView;
+        TextView tvOne;
+        TextView tvTwo;
+        TextView tvThree;
         public TitleViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvTitle = itemView.findViewById(R.id.tv_title);
+            imageView = itemView.findViewById(R.id.iv_recommed);
+            tvOne = itemView.findViewById(R.id.tv_one);
+            tvTwo = itemView.findViewById(R.id.tv_two);
+            tvThree = itemView.findViewById(R.id.tv_three);
         }
     }
 }
