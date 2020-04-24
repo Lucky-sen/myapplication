@@ -61,6 +61,8 @@
         <activity android:name=".ui.Activity.ShoppingCartActivity"/>
         <!--全部分类-->
         <activity android:name=".ui.Activity.CategoryActivity"/>
+        <!--沉浸式模式-->
+        <activity android:name=".ui.Activity.ImmersiveActivity"/>
     </application>
 
 </manifest>

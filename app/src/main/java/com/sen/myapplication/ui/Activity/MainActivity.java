@@ -11,6 +11,8 @@ import butterknife.BindView;
 
 public class MainActivity extends BaseActivity  implements View.OnClickListener{
 
+    @BindView(R.id.btn_immersive)
+    Button btnImmersive;
     private Button btnVlayout;
     @BindView(R.id.btn_shopping_cart)
     Button btnCatr;
@@ -25,6 +27,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
         btnVlayout = findViewById(R.id.btn_vlayout);
         btnVlayout.setOnClickListener(this);
         btnCatr.setOnClickListener(this);
+        btnImmersive.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +47,10 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
             case R.id.btn_shopping_cart:
                 Intent intent1 = new Intent(this,ShoppingCartActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.btn_immersive:
+                Intent intent2 = new Intent(this,ImmersiveActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

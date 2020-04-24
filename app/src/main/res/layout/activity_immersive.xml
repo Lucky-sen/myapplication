@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:id="@+id/iv_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@mipmap/icon_banner_five"
+    android:scaleType="centerCrop"
+    />
+
+    <Button
+        android:id="@+id/btn_hide_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐藏状态栏"
+        />
+    <Button
+        android:id="@+id/btn_hide_actionbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_hide_status"
+        android:text="隐藏ActionBar"
+        />
+    <Button
+        android:id="@+id/btn_transparent_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_hide_actionbar"
+        android:text="透明状态栏"
+        />
+</RelativeLayout>

@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckBox;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.sen.myapplication.R;
 import com.sen.myapplication.bean.CartBean;
 
@@ -74,6 +77,12 @@ public class ShoppingCartAdapter extends BaseExpandableListAdapter {
         }else {
             groupViewHolder = (GroupViewHolder) convertView.getTag();
         }
+        groupViewHolder.tvShop.setText(datas.get(groupPosition).getStoreName());
+        if(datas.get(groupPosition).isSelectShop()){
+            groupViewHolder.checkboxShop.setChecked(true);
+        }else {
+            groupViewHolder.checkboxShop.setChecked(false);
+        }
         return convertView;
     }
 
@@ -97,17 +106,29 @@ public class ShoppingCartAdapter extends BaseExpandableListAdapter {
 
     static class GroupViewHolder{
         TextView tvShop;
+        CheckBox checkboxShop;
 
         GroupViewHolder(View view){
             tvShop = view.findViewById(R.id.tv_shop);
+            checkboxShop = view.findViewById(R.id.checkbox_shop);
         }
     }
 
     static class ChildViewHolder{
+        CheckBox checkBox;
+        ImageView ivGood;
         TextView tvGoodName;
+        TextView tvGoodExplain;
+        TextView tvSumPrice;
+
 
         ChildViewHolder(View view){
+            checkBox = view.findViewById(R.id.checkbox);
+            ivGood = view.findViewById(R.id.iv_good);
             tvGoodName = view.findViewById(R.id.tv_good_name);
+            tvGoodExplain = view.findViewById(R.id.tv_good_explain);
+            tvSumPrice = view.findViewById(R.id.tv_sum_price);
+
         }
     }
 }

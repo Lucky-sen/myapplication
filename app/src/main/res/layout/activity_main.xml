@@ -13,11 +13,20 @@
         android:text="Hello World!"
         android:layout_alignParentTop="true"
          />
+
+    <Button
+        android:id="@+id/btn_immersive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hello"
+        android:layout_centerHorizontal="true"
+        android:text="immersive"
+        />
     <Button
         android:id="@+id/btn_vlayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_hello"
+        android:layout_below="@+id/btn_immersive"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:text="vLayout"

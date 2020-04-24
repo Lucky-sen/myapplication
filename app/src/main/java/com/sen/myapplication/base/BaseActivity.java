@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -60,6 +61,10 @@ public abstract class BaseActivity extends AppCompatActivity  {
         } else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
+
+        //隐藏ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         //初始化控件
         initView();
