@@ -1,54 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Activity.MainActivity">
+    >
+    <RelativeLayout
 
-    <TextView
-        android:id="@+id/tv_hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_alignParentTop="true"
-         />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.Activity.MainActivity">
 
-    <Button
-        android:id="@+id/btn_immersive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_hello"
-        android:layout_centerHorizontal="true"
-        android:text="immersive"
-        />
-    <Button
-        android:id="@+id/btn_vlayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_immersive"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:text="vLayout"
-        />
-    <Button
-        android:id="@+id/btn_shopping_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btn_vlayout"
-        android:text="shoppingCart"
-        />
+        <TextView
+            android:id="@+id/tv_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:layout_alignParentTop="true"
+            />
 
-    <Button
-        android:id="@+id/btn_category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btn_shopping_cart"
-        android:text="Category"
-        />
+        <Button
+            android:id="@+id/btn_immersive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hello"
+            android:layout_centerHorizontal="true"
+            android:text="immersive"
+            />
+        <Button
+            android:id="@+id/btn_vlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_immersive"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="vLayout"
+            />
+        <Button
+            android:id="@+id/btn_shopping_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_vlayout"
+            android:text="shoppingCart"
+            />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_shopping_cart"
+            android:text="Category"
+            />
+        <Button
+            android:id="@+id/btn_appbar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_category"
+            android:text="appBarLayout"
+            />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

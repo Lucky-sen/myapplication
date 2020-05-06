@@ -16,6 +16,8 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
     private Button btnVlayout;
     @BindView(R.id.btn_shopping_cart)
     Button btnCatr;
+    @BindView(R.id.btn_appbar_layout)
+    Button btnAppBar;
 
     @Override
     protected int getLayout() {
@@ -28,6 +30,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
         btnVlayout.setOnClickListener(this);
         btnCatr.setOnClickListener(this);
         btnImmersive.setOnClickListener(this);
+        btnAppBar.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +54,10 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
             case R.id.btn_immersive:
                 Intent intent2 = new Intent(this,ImmersiveActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.btn_appbar_layout:
+                Intent intent3 = new Intent(this,AppBarLayoutActivity.class);
+                startActivity(intent3);
                 break;
         }
     }
