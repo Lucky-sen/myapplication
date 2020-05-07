@@ -18,6 +18,9 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
     Button btnCatr;
     @BindView(R.id.btn_appbar_layout)
     Button btnAppBar;
+    @BindView(R.id.btn_category)
+    Button btnCategory;
+
 
     @Override
     protected int getLayout() {
@@ -31,6 +34,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
         btnCatr.setOnClickListener(this);
         btnImmersive.setOnClickListener(this);
         btnAppBar.setOnClickListener(this);
+        btnCategory.setOnClickListener(this);
     }
 
     @Override
@@ -43,22 +47,27 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_vlayout:
-                Intent intent = new Intent();
+                Intent intent = new Intent(); //商城首页
                 intent.setClass(this, VlayoutActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.btn_shopping_cart:
+            case R.id.btn_shopping_cart: //购物车
                 Intent intent1 = new Intent(this,ShoppingCartActivity.class);
                 startActivity(intent1);
                 break;
-            case R.id.btn_immersive:
+            case R.id.btn_immersive: //沉浸模式
                 Intent intent2 = new Intent(this,ImmersiveActivity.class);
                 startActivity(intent2);
                 break;
-            case R.id.btn_appbar_layout:
+            case R.id.btn_appbar_layout:  //折叠效果
                 Intent intent3 = new Intent(this,AppBarLayoutActivity.class);
                 startActivity(intent3);
                 break;
+            case R.id.btn_category:   //分类列表
+                Intent intent4 = new Intent(this,CategoryActivity.class);
+                startActivity(intent4);
+                break;
+
         }
     }
 }

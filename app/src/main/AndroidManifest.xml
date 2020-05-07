@@ -67,6 +67,10 @@
         <activity android:name=".ui.Activity.AppBarLayoutActivity"/>
         <activity android:name=".ui.Activity.NestedScrollActivity"/>
 
+
+        <!--筛选-->
+        <activity android:name=".ui.Activity.ScreenActivity"/>
+
         <!--吸顶Activity-->
         <activity android:name=".ui.Activity.XidingActivity"/>
         <!--折叠效果 Activity-->
